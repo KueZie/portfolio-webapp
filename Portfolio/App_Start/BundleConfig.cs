@@ -50,7 +50,8 @@ namespace Portfolio
                       "~/Content/css/style.css",
                       "~/Content/vendor/venobox/venobox.css",
                       "~/Content/vendor/owl.carousel/assets/owl.carousel.min.css",
-                      "~/Content/vendor/aos/aos.css"));
+                      "~/Content/vendor/aos/aos.css",
+                      "~/Content/vendor/icofont/icofont.min.css"));
         }
     }
 }
