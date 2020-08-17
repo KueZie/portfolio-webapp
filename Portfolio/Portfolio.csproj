@@ -140,25 +140,9 @@
     <Content Include="Content\css\error-page-style.css" />
     <Content Include="Content\img\apple-touch-icon.png" />
     <Content Include="Content\img\favicon.png" />
+    <Content Include="Content\img\hero-bg2.jpg" />
     <Content Include="Content\img\hero-bg.jpg" />
-    <Content Include="Content\img\portfolio\portfolio-1.jpg" />
-    <Content Include="Content\img\portfolio\portfolio-2.jpg" />
-    <Content Include="Content\img\portfolio\portfolio-3.jpg" />
-    <Content Include="Content\img\portfolio\portfolio-4.jpg" />
-    <Content Include="Content\img\portfolio\portfolio-5.jpg" />
-    <Content Include="Content\img\portfolio\portfolio-6.jpg" />
-    <Content Include="Content\img\portfolio\portfolio-7.jpg" />
-    <Content Include="Content\img\portfolio\portfolio-8.jpg" />
-    <Content Include="Content\img\portfolio\portfolio-9.jpg" />
-    <Content Include="Content\img\portfolio\portfolio-details-1.jpg" />
-    <Content Include="Content\img\portfolio\portfolio-details-2.jpg" />
-    <Content Include="Content\img\portfolio\portfolio-details-3.jpg" />
     <Content Include="Content\img\profile-img.jpg" />
-    <Content Include="Content\img\testimonials\testimonials-1.jpg" />
-    <Content Include="Content\img\testimonials\testimonials-2.jpg" />
-    <Content Include="Content\img\testimonials\testimonials-3.jpg" />
-    <Content Include="Content\img\testimonials\testimonials-4.jpg" />
-    <Content Include="Content\img\testimonials\testimonials-5.jpg" />
     <Content Include="Content\vendor\aos\aos.css" />
     <Content Include="Content\vendor\bootstrap\css\bootstrap-grid.css" />
     <Content Include="Content\vendor\bootstrap\css\bootstrap-grid.min.css" />
@@ -240,6 +224,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\img\portfolio\" />
+    <Folder Include="Content\img\testimonials\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
