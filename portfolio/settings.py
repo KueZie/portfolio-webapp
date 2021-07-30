@@ -12,13 +12,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 TEST_KEY = 'django-insecure-la#cqxig8=raajc3wab+d_s=sapi0825=1pk6oo5+=j@%r-t@%'
 
-SECRET_KEY = os.environ.get('PROD_SECRET_KEY') or TEST_KEY
+SECRET_KEY = os.environ.get('PROD_SECRET_KEY', TEST_KEY)
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False if os.environ.get('PROD_ENV') else True
 
 ALLOWED_HOSTS = []
 
+# Application specific settings
+MAILER_RECIPIENT = os.environ.get('MAILER_RECIPIENT', '')
 
 # Application definition
 
