@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>{{ Title }}</title>
+    <meta name="description" content="Developer and student pursuing a Bachelor of Science in Computer Science from Florida State University. Fascinated with computers, robotics, and space.">
+
+    <!-- Favicons -->
+    {% load static %}
+    <link href="{% static '/img/favicon.png' %}" rel="icon">
+    <link href="{% static '/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <!-- Boxicons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+    {%  load static %}
+    <link rel="stylesheet" href="{% static '/vendor/css/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static '/vendor/css/bootstrap/css/bootstrap.min.css.map' %}">
+    <link rel="stylesheet" href="{% static '/vendor/css/bootstrap/css/bootstrap.css.map' %}">
+    <link rel="stylesheet" href="{% static '/css/style.css' %}">
+    <link rel="stylesheet" href="{% static '/Site.css' %}">
+    <link rel="stylesheet" href="{% static '/vendor/css/venobox/venobox.css' %}">
+    <link rel="stylesheet" href="{% static '/vendor/css/owl.carousel/assets/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static '/vendor/css/aos/aos.css' %}">
+    <link rel="stylesheet" href="{% static '/vendor/css/icofont/icofont.css' %}">
+    <link rel="stylesheet" href="{% static '/vendor/css/icofont/fonts/icofont.woff' %}">
+    <link rel="stylesheet" href="{% static '/vendor/css/icofont/fonts/icofont.woff2' %}">
+</head>
+
+<body>
+
+    <!-- ======= Mobile nav toggle button ======= -->
+    <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="d-flex flex-column justify-content-center">
+
+        <nav class="nav-menu">
+            <ul>
+                <li class="active"><a href="#hero"><i class="bx bx-home"></i> <span>Home</span></a></li>
+                <li><a href="#about"><i class="bx bx-user"></i> <span>About</span></a></li>
+                <li><a href="#skills"><i class="bx bx-book-content"></i> <span>Skills</span></a></li>
+                <li><a href="#resume"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
+                <!--<li><a href="#services"><i class="bx bx-server"></i> <span>Services</span></a></li>-->
+                <li><a href="#contact"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
+            </ul>
+        </nav><!-- .nav-menu -->
+
+    </header><!-- End Header -->
+    <!-- ======= Hero Section ======= -->
+    <section id="hero" class="d-flex flex-column justify-content-center">
+        <div class="container" data-aos="zoom-in" data-aos-delay="100">
+            <h1>Hunter Goram</h1>
+            <p>I'm a <span class="typed" data-typed-items="Developer, Computer Scientist"></span></p>
+            <div class="social-links">
+                <a href="{{ GithubURL }}" target="_blank" class="github"><i class="bx bxl-github"></i></a>
+                <a href="{{ TwitterURL }}" target="_blank" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="{{ LinkedinURL }}" target="_blank" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            </div>
+        </div>
+    </section><!-- End Hero -->
+
+    <main id="main">
+
+        <!-- ======= About Section ======= -->
+        <section id="about" class="about">
+            <div class="container" data-aos="fade-up">
+
+                <div class="section-title">
+                    <h2>About</h2>
+                </div>
+
+                <div class="row">
+                    <!--<div class="col-lg-4">
+                        <img src=@Url.Content("~/Content/img/profile-img.jpg") class="img-fluid" alt="">
+                    </div>-->
+                    <div class="col-lg-12 pt-4 pt-lg-0 content">
+                        <h3>Back End Developer &amp; Computer Scientist.</h3>
+                        <p>Computer Science student at Florida State University, computer programming enthusiast, and robotics hobbyist.</p>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <ul>
+                                    <li><i class="icofont-rounded-right"></i> <strong>School:</strong> Florida State University</li>
+                                    <li><i class="icofont-rounded-right"></i> <strong>Degree:</strong> BS in Computer Science (2024)</li>
+                                    <li><i class="icofont-rounded-right"></i> <strong>Phone:</strong> (850) 544-7140</li>
+                                    <li><i class="icofont-rounded-right"></i> <strong>City:</strong> Tallahassee, FL</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <p style="line-height: 215%;">
+                            I started teaching myself how to program computers when I was thirteen and have not stopped learning since. I became the lead programmer for my high school’s robotics organization in 2017, due to my proficiency with computers and computer programming. Since then I have enrolled at Florida State University, pursuing a Bachelor of Science in Computer Science.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section><!-- End About Section -->
+        <!-- ======= Skills Section ======= -->
+        <section id="skills" class="resume section-bg">
+            <div class="container" data-aos="fade-up">
+
+                <div class="section-title">
+                    <h2>Skills</h2>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-6 skills-container">
+                        <div class="row justify-content-center" data-aos="fade-right" data-aos-delay="400">
+                            <div class="col-lg-10">
+                                <h3 class="skills-title text-center">Frontend</h3>
+                                <div class="skills-item">
+                                    <ul class="diamond">
+                                        <li>HTML & CSS</li>
+                                        <li>JavaScript (React, Node.js, Express, jQuery)</li>
+                                        <li>REST APIs</li>
+                                        <li>Postman</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center" data-aos="fade-left" data-aos-delay="400">
+                            <div class="col-lg-10">
+                                <h3 class="skills-title text-center">Backend</h3>
+                                <div class="skills-item">
+                                    <ul>
+                                        <li>Python (Django, Flask, Jinja2, NumPy)</li>
+                                        <li>Java (Hibernate, JDBC, Lombok, Maven, Jackson)<br/>&ensp;Spring (Boot, Data JPA)</li>
+                                        <li>C# (ASP.NET Framework)</li>
+                                        <li>SQL (Oracle Database, SQLite3)</li>
+                                        <li>NoSQL (Firebase, MongoDB)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center" data-aos="fade-right" data-aos-delay="400">
+                            <div class="col-lg-10">
+                                <h3 class="skills-title text-center">Miscellaneous</h3>
+                                <div class="skills-item">
+                                    <ul>
+                                        <li>Version Control (Git, Azure DevOps)</li>
+                                        <li>Linux</li>
+                                        <li>Agile/Scrum Development</li>
+                                        <li>C++
+                                        <li>C</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><!-- End Skills Section -->
+        <!-- ======= Resume Section ======= -->
+        <section id="resume" class="resume">
+            <div class="container" data-aos="fade-up">
+
+                <div class="section-title">
+                    <h2>Resume</h2>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h3 class="resume-title">Summary</h3>
+                        <div class="resume-item pb-0">
+                            <h4>Hunter Goram</h4>
+                            <p><em>Innovative and passionate developer with years of experience designing and developing back end web applications and robotics control software.</em></p>
+                            <ul>
+                                <li>Tallahassee, FL</li>
+                                <li>(850) 544-7140</li>
+                                <li>huntergoram2@gmail.com</li>
+                            </ul>
+                        </div>
+
+                        <h3 class="resume-title">Education</h3>
+                        <div class="resume-item">
+                            <h4>Bachelor of Science, Computer Science</h4>
+                            <h5>2020 - 2024</h5>
+                            <p><em>Florida State University, Tallahassee, FL</em></p>
+                            <p>Currently, pursuing a Bachelor of Science in Computer Science at Florida State University, forwarding my goals of becoming a more informed, skilled developer.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <h3 class="resume-title">Experience</h3>
+                        <div class="resume-item">
+                            <h4>Lead Software Engineer</h4>
+                            <h5>2017 - 2020</h5>
+                            <p><em>Lake Minneola High School, Minneola, FL </em></p>
+                            <ul>
+                                <li>Led a team of prospective software engineers in the design, development, and implementation of motor control, network, and automation software.</li>
+                                <li>Introduced standards and practices to the team and create tests to ensure the proper functionality of robotic operations. </li>
+                                <li>Optimized vision-assistance and automation software leveraging parallel computing concepts and single-board computers</li>
+                                <li>Developed software utilizing C++, Java, and Python on hardware with limited computational resources.</li>
+                                <li>Oversaw the efficient use of project budget ranging from $200 - $100.</li>
+                                <li>Under my leadership, the team won its first event in team history and was 2nd place in another.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h3 class="resume-title">Experience</h3>
+                        <div class="resume-item">
+                            <h4>Application Developer – Intern</h4>
+                            <h5>June - August 2021</h5>
+                            <p><em>Raymond James Financial</em></p>
+                            <ul>
+                                <li>Developed an automation test engine to flag small changes in system behavior that are not caught by unit test cases</li>
+                                <li>Worked on general product tickets, solving bugs and introducing features.</li>
+                                <li>Worked in a team of diverse engineers from differing backgrounds in an Agile pattern to quickly and effectively complete project objectives.</li>
+                                <li>Optimized database access queries utilizing Spring Data JPA to improve backend service efficiency and reduce latency for the end user.</li>
+                                <li>Communicated with team members to ensure proper completion of project requirements.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section><!-- End Resume Section -->
+        <!-- ======= Contact Section ======= -->
+        <section id="contact" class="contact">
+            <div class="container" data-aos="fade-up">
+
+                <div class="section-title">
+                    <h2>Contact</h2>
+                </div>
+                <div class="row mt-1 justify-content-center">
+                    <div class="col-lg-3 justify-content-center">
+                        <div class="info">
+                            <div class="address">
+                                <i class="icofont-google-map"></i>
+                                <h4>Location:</h4>
+                                <p>Tallahassee, FL 32309</p>
+                            </div>
+
+                            <div class="email">
+                                <i class="icofont-envelope"></i>
+                                <h4>Email:</h4>
+                                <p>huntergoram2@gmail.com</p>
+                            </div>
+
+                            <div class="phone">
+                                <i class="icofont-phone"></i>
+                                <h4>Call:</h4>
+                                <p>(850) 544-7140</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!--<div class="col-lg-8 mt-5 mt-lg-0">
+                        
+                        @using (Html.BeginForm("Index", "Home", FormMethod.Post, new { @class = "php-email-form", @role = "form" }))
+                        {
+                        <div action="/" method="POST" class="php-email-form" role="form">
+                            @Html.AntiForgeryToken()
+                            <div class="form-row">
+                                @Html.ValidationSummary(true, "", new { @class = "text-danger small"})
+                                <div class="col-md-6 form-group">
+                                    @Html.TextBoxFor(model => model.Name, new { @class = "form-control", @name = "name", @placeholder = "Your Name" })
+                                    @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger small" })
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    @Html.TextBoxFor(model => model.EmailAddress, new { @class = "form-control", @name = "name", @placeholder = "Your Email" })
+                                    @Html.ValidationMessageFor(model => model.EmailAddress, "", new { @class = "text-danger small" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.TextBoxFor(model => model.Subject, new { @class = "form-control", @name = "name", @placeholder = "Subject" })
+                                @Html.ValidationMessageFor(model => model.Subject, "", new { @class = "text-danger small" })
+                            </div>
+                            <div class="form-group">
+                                @Html.TextAreaFor(model => model.Message, new { @class = "form-control", @name = "name", @placeholder = "Message", @rows = 4 })
+                                @Html.ValidationMessageFor(model => model.Message, "", new { @class = "text-danger small" })
+                            </div>
+                            <div class="text-center"><button type="submit">Send Message</button></div>
+
+                        }
+                       
+                    </div>
+
+                </div>
+
+            </div>
+        </section>-->
+        <!-- End Contact Section -->
+
+    </main><!-- End #main -->
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+        <div class="container">
+            <h3>Hunter Goram</h3>
+            <p>Wow! You made it all the way here. Consider contacting me with business inquiries in the section above.</p>
+            <div class="social-links">
+                <a href="{{ TwitterURL }}" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="{{ GithubURL }}" class="google-plus"><i class="bx bxl-github"></i></a>
+                <a href="{{ LinkedinURL }}" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            </div>
+        </div>
+    </footer><!-- End Footer -->
+
+    <a href="#" class="back-to-top"><i class="bx bx-up-arrow-alt"></i></a>
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    {% load static %}
+    <script src="{% static '/vendor/scripts/jquery/jquery.min.js' %}"></script>
+    <script src="{% static '/vendor/scripts/jquery.validate/jquery.validate.min.js' %}"></script>
+    <script src="{% static '/vendor/scripts/jquery.validate/jquery.validate.unobtrusive.js' %}"></script>
+    <script src="{% static '/vendor/scripts/jquery.easing/jquery.easing.min.js' %}"></script>
+    <script src="{% static '/vendor/scripts/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static '/vendor/scripts/waypoints/jquery.waypoints.min.js' %}"></script>
+    <script src="{% static '/vendor/scripts/counterup/counterup.min.js' %}"></script>
+    <script src="{% static '/vendor/scripts/isotope-layout/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static '/vendor/scripts/venobox/venobox.min.js' %}"></script>
+    <script src="{% static '/vendor/scripts/owl.carousel/owl.carousel.min.js' %}"></script>
+    <script src="{% static '/vendor/scripts/typed.js/typed.min.js' %}"></script>
+    <script src="{% static '/vendor/scripts/aos/aos.js' %}"></script>
+
+    <!-- Template Main JS File -->
+    <script src={% static '/main.js' %}></script>
+
+</body>
+
+</html>
