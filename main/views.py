@@ -9,7 +9,7 @@ from portfolio.utils import conditional_never_cache
 def index(request):
     template = loader.get_template('index.html')
     context = {
-        'Title': "Hunter Goram | Developer | Computer Engineer",
+        'Title': "Hunter Goram | Developer | Computer Scientist",
         'GithubURL': "https://www.github.com/KueZie",
         'TwitterURL': "https://twitter.com/goram_hunter",
         'LinkedinURL': "https://www.linkedin.com/in/hunter-goram-96355a168?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BXZjFM%2BNjTSyJM6UVEpMmew%3D%3D"
