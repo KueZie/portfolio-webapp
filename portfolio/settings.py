@@ -15,7 +15,7 @@ SECRET_KEY = os.getenv('SECRET_KEY', NON_PRODUCTION_KEY)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG')
 
-ALLOWED_HOSTS = ['hunter-portfolio-webapp.herokuapp.com', 'www.huntergoram.com']
+ALLOWED_HOSTS = ['hunter-portfolio-webapp.herokuapp.com', 'www.huntergoram.com', 'localhost']
 
 
 # Application definition
