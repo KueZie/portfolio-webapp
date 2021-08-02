@@ -1,4 +1,13 @@
-﻿body {
+﻿html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Make scrollbar invisible */
+}
+
+body {
     padding-bottom: 20px;
 }
 
