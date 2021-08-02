@@ -32,10 +32,9 @@ INSTALLED_APPS = [
     'api.graphql.loader'
 ]
 
-# if DEBUG:
-#     INSTALLED_APPS = [
-#         'whitenoise.runserver_nostatic',
-#     ] + INSTALLED_APPS
+if not DEBUG:
+    SECURE_SSL_REDIRECT = True
+    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https') # Required for Heroku or infinite redirects error
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
