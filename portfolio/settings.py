@@ -17,6 +17,8 @@ DEBUG = os.environ.get('DEBUG')
 
 ALLOWED_HOSTS = ['hunter-portfolio-webapp.herokuapp.com', 'www.huntergoram.com', 'localhost']
 
+GRAPHQL_SEARCH_DIRECTORIES = ['graphql_queries']
+GITHUB_API_TOKEN = os.getenv('GITHUB_API_TOKEN', '')
 
 # Application definition
 
@@ -27,6 +29,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'api.graphql.loader'
 ]
 
 MIDDLEWARE = [
