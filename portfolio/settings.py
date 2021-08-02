@@ -32,6 +32,11 @@ INSTALLED_APPS = [
     'api.graphql.loader'
 ]
 
+# if DEBUG:
+#     INSTALLED_APPS = [
+#         'whitenoise.runserver_nostatic',
+#     ] + INSTALLED_APPS
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',

@@ -13,6 +13,14 @@ query {
                 primaryLanguage {
                   name
                 }
+                languages(first: 3) {
+                  edges {
+                    node {
+                      name
+                    }
+                  }
+                }
+                url
               }
             }
           }

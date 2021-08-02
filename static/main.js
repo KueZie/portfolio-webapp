@@ -140,6 +140,44 @@
     });
   }
 
+  $(document).ready(() => {
+    console.log('Initializing Repos');
+    fetch('/api/github_pinned_repos', { method: 'GET' })
+        .then(res => res.json())
+        .then(json => {
+          const itemShowcase = json.repositoryOwner.itemShowcase;
+          const parent = $('#repositories .container .row');
+
+          // Only attempt to show repositories if we actually have data
+          if (itemShowcase.hasPinnedItems) {
+            const items = itemShowcase.items.edges.map(
+                item => {
+                  return {
+                    ...item.node,
+                    primaryLanguage: item.node.primaryLanguage.name,
+                    languages: item.node.languages.edges.map(language => language.node.name),
+                    description: item.node.description != null ? item.node.description : 'No description.'
+                  };
+                });
+
+            for (const item of items) {
+              parent.append(`<div class="col-lg-6">
+                                <div class="card repo-card m-1 mb-3">
+                                    <div class="card-body">
+                                      <h5 class="card-title"><a href="${item.url}" target="_blank">${item.name}</a></h5>
+                                      <h6 class="card-subtitle mb-2 text-muted">${item.languages.join(', ')}</h6>
+                                      <p>${item.description}</p>
+                                    </div>
+                                </div>
+                             </div>`);
+            }
+          } else {
+            // There is no data, show error message
+            parent.append(`<h5 class="text-center">Normally my GitHub projects would show up here; however, something has went wrong when fetching from GitHub's GraphQL API. </br></br>My apologies.</h5>`);
+          }
+        });
+  });
+
   // Porfolio isotope and filter
   $(window).on('load', function() {
     var portfolioIsotope = $('.portfolio-container').isotope({
