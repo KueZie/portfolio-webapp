@@ -142,11 +142,13 @@
 
   $(document).ready(() => {
     console.log('Initializing Repos');
+
+    const parent = $('#repositories .container .row');
+
     fetch('/api/github_pinned_repos', { method: 'GET' })
         .then(res => res.json())
         .then(json => {
           const itemShowcase = json.repositoryOwner.itemShowcase;
-          const parent = $('#repositories .container .row');
 
           // Only attempt to show repositories if we actually have data
           if (itemShowcase.hasPinnedItems) {
@@ -173,9 +175,10 @@
             }
           } else {
             // There is no data, show error message
-            parent.append(`<h5 class="text-center">Normally my GitHub projects would show up here; however, something has went wrong when fetching from GitHub's GraphQL API. </br></br>My apologies.</h5>`);
+            this.reject();
           }
-        });
+        })
+        .catch(_ => parent.append(`<h5 class="text-center">Normally my GitHub projects would show up here; however, something has went wrong when fetching from GitHub's GraphQL API. </br></br>My apologies.</h5>`));
   });
 
   // Porfolio isotope and filter
