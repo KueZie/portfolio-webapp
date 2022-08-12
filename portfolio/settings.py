@@ -13,9 +13,9 @@ NON_PRODUCTION_KEY = 'django-insecure-la#cqxig8=raajc3wab+d_s=sapi0825=1pk6oo5+=
 SECRET_KEY = os.getenv('SECRET_KEY', NON_PRODUCTION_KEY)
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DEBUG')
+DEBUG = os.environ.get('DEBUG', True)
 
-ALLOWED_HOSTS = ['hunter-portfolio-webapp.herokuapp.com', 'www.huntergoram.com', 'localhost']
+ALLOWED_HOSTS = ['hunter-portfolio-webapp.herokuapp.com', 'www.huntergoram.com', 'localhost', '127.0.0.1']
 
 GRAPHQL_SEARCH_DIRECTORIES = ['graphql_queries']
 GITHUB_API_TOKEN = os.getenv('GITHUB_API_TOKEN', '')
