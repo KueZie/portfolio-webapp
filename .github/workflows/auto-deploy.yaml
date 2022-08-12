@@ -16,7 +16,7 @@ jobs:
             username: ${{ secrets.DOCKERHUB_USERNAME }}
             password: ${{ secrets.DOCKERHUB_TOKEN }}
         - name: Build, Push and Release a Docker container to Heroku. # Your custom step name
-        - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
+          uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
           with:
             heroku_email: ${{ secrets.HEROKU_EMAIL }}
 
