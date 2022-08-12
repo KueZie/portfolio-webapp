@@ -5,22 +5,25 @@ on:
     branches:
       - master
 
+env:
+  HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+  APP_NAME: ${{ secrets.HEROKU_APP_NAME }}
+
 jobs:
-  build:
+  deploy:
+    name: Deploy to Heroku
     runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v2
-      - name: Updating Ubuntu system and Heroku
-        env: 
-          HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
-        run: sudo apt update && sudo apt install neofetch && sudo snap install heroku
-      - name: Checking the info
-        run: neofetch
-      - uses: akhileshns/heroku-deploy@v3.8.8
-        with:
-          heroku_email: ${{secrets.HEROKU_EMAIL}}
-          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_app_name: ${{secrets.HEROKU_APP_NAME}}
-          branch: HEAD
-          useforce: false
-          dynamicFiles: false
+      # Clone the repository
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      # Build Docker image
+      - name: Docker build
+        run: docker login --username=kuezster --password=$HEROKU_API_KEY registry.heroku.com
+
+      # Push the Docker image to Heroku Container Registry
+      - name: Publish
+        run: |
+          heroku container:push web -a $APP_NAME
+          heroku container:release web -a $APP_NAME
