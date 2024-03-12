@@ -168,7 +168,7 @@
                                     <div class="card-body">
                                       <h5 class="card-title"><a href="${item.url}" target="_blank">${item.name}</a></h5>
                                       <h6 class="card-subtitle mb-2 text-muted">${item.languages.join(', ')}</h6>
-                                      <p>${item.description}</p>
+                                      <p class="card-text">${item.description}</p>
                                     </div>
                                 </div>
                              </div>`);
