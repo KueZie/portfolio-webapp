@@ -1,10 +1,10 @@
-!(function($) {
+!(function ($) {
   "use strict";
 
   // Preloader
-  $(window).on('load', function() {
+  $(window).on('load', function () {
     if ($('#preloader').length) {
-      $('#preloader').delay(100).fadeOut('slow', function() {
+      $('#preloader').delay(100).fadeOut('slow', function () {
         $(this).remove();
       });
     }
@@ -24,7 +24,7 @@
   }
 
   // Smooth scroll for the navigation menu and links with .scrollto classes
-  $(document).on('click', '.nav-menu a, .scrollto', function(e) {
+  $(document).on('click', '.nav-menu a, .scrollto', function (e) {
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
       var target = $(this.hash);
       if (target.length) {
@@ -51,7 +51,7 @@
   });
 
   // Activate smooth scroll on page load with hash links in the url
-  $(document).ready(function() {
+  $(document).ready(function () {
     if (window.location.hash) {
       var initial_nav = window.location.hash;
       if ($(initial_nav).length) {
@@ -63,12 +63,12 @@
     }
   });
 
-  $(document).on('click', '.mobile-nav-toggle', function(e) {
+  $(document).on('click', '.mobile-nav-toggle', function (e) {
     $('body').toggleClass('mobile-nav-active');
     $('.mobile-nav-toggle i').toggleClass('icofont-navigation-menu icofont-close');
   });
 
-  $(document).click(function(e) {
+  $(document).click(function (e) {
     var container = $(".mobile-nav-toggle");
     if (!container.is(e.target) && container.has(e.target).length === 0) {
       if ($('body').hasClass('mobile-nav-active')) {
@@ -82,10 +82,10 @@
   var nav_sections = $('section');
   var main_nav = $('.nav-menu, #mobile-nav');
 
-  $(window).on('scroll', function() {
+  $(window).on('scroll', function () {
     var cur_pos = $(this).scrollTop() + 300;
 
-    nav_sections.each(function() {
+    nav_sections.each(function () {
       var top = $(this).offset().top,
         bottom = top + $(this).outerHeight();
 
@@ -102,7 +102,7 @@
   });
 
   // Back to top button
-  $(window).scroll(function() {
+  $(window).scroll(function () {
     if ($(this).scrollTop() > 100) {
       $('.back-to-top').fadeIn('slow');
     } else {
@@ -110,7 +110,7 @@
     }
   });
 
-  $('.back-to-top').click(function() {
+  $('.back-to-top').click(function () {
     $('html, body').animate({
       scrollTop: 0
     }, 1500, 'easeInOutExpo');
@@ -124,8 +124,8 @@
   });
 
   // Skills section
-  $('.skills-content').waypoint(function() {
-    $('.progress .progress-bar').each(function() {
+  $('.skills-content').waypoint(function () {
+    $('.progress .progress-bar').each(function () {
       $(this).css("width", $(this).attr("aria-valuenow") + '%');
     });
   }, {
@@ -146,48 +146,59 @@
     const parent = $('#repositories .container .row');
 
     fetch('/api/github_pinned_repos', { method: 'GET' })
-        .then(res => res.json())
-        .then(json => {
-          const itemShowcase = json.repositoryOwner.itemShowcase;
+      .then(res => res.json())
+      .then(json => {
+        const itemShowcase = json.repositoryOwner.itemShowcase;
 
-          // Only attempt to show repositories if we actually have data
-          if (itemShowcase.hasPinnedItems) {
-            const items = itemShowcase.items.edges.map(
-                item => {
-                  return {
-                    ...item.node,
-                    primaryLanguage: item.node.primaryLanguage.name,
-                    languages: item.node.languages.edges.map(language => language.node.name),
-                    description: item.node.description != null ? item.node.description : 'No description.'
-                  };
-                });
+        // Only attempt to show repositories if we actually have data
+        if (itemShowcase.hasPinnedItems) {
+          const items = Array.from(itemShowcase.items.edges.map(
+            item => {
+              return {
+                ...item.node,
+                primaryLanguage: item.node.primaryLanguage.name,
+                languages: item.node.languages.edges.map(language => language.node.name),
+                description: item.node.description != null ? item.node.description : 'No description.'
+              };
+            }));
+          // Remove last item
+          items.pop();
 
-            for (const item of items) {
-              parent.append(`<div class="col-lg-6">
-                                <div class="card repo-card m-1 mb-3">
+          // Add my own project
+          items.splice(0, 0, {
+            name: 'GeckoJump',
+            url: 'https://geckojump.com',
+            primaryLanguage: 'JavaScript',
+            languages: ['JavaScript', 'HTML', 'CSS'],
+            description: 'Technology consulting website and customer relationship manager (CRM) for a startup agency. Written in React and Python, persisted by MongoDB.'
+          });
+
+          for (const item of items) {
+            parent.append(`<div class="col-lg-6">
+                                <div class="card repo-card m-1">
                                     <div class="card-body">
-                                      <h5 class="card-title"><a href="${item.url}" target="_blank">${item.name}</a></h5>
+                                      <h5 class="card-title"><a href="${item.url}" class="stretched-link" target="_blank">${item.name.toLowerCase()}</a></h5>
                                       <h6 class="card-subtitle mb-2 text-muted">${item.languages.join(', ')}</h6>
                                       <p class="card-text">${item.description}</p>
                                     </div>
                                 </div>
                              </div>`);
-            }
-          } else {
-            // There is no data, show error message
-            this.reject();
           }
-        })
-        .catch(_ => parent.append(`<h5 class="text-center">Normally my GitHub projects would show up here; however, something has went wrong when fetching from GitHub's GraphQL API. </br></br>My apologies.</h5>`));
+        } else {
+          // There is no data, show error message
+          this.reject();
+        }
+      })
+      .catch(_ => parent.append(`<h5 class="text-center px-5">Normally my GitHub projects would show up here; however, something has went wrong when fetching from GitHub's GraphQL API. </br></br>My apologies.</h5>`));
   });
 
   // Porfolio isotope and filter
-  $(window).on('load', function() {
+  $(window).on('load', function () {
     var portfolioIsotope = $('.portfolio-container').isotope({
       itemSelector: '.portfolio-item'
     });
 
-    $('#portfolio-flters li').on('click', function() {
+    $('#portfolio-flters li').on('click', function () {
       $("#portfolio-flters li").removeClass('filter-active');
       $(this).addClass('filter-active');
 
