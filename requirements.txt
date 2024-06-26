@@ -1,4 +1,0 @@
-Django==3.2.5
-gql==2.0.0
-gunicorn
-whitenoise
