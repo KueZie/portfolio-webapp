@@ -24,7 +24,7 @@ const ContentItem = ({
     if (isInView) {
       handleInView?.();
     }
-  }, [isInView]);
+  }, [isInView, handleInView]);
 
   return (
     <div id={id} key={title} ref={ref} className="my-20 scroll-mt-64">

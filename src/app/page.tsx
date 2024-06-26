@@ -113,7 +113,7 @@ const content = [
     description: (
       <>
         I&apos;m always working on something new. Check out my GitHub to see
-        what I'm up to.
+        what I&apos;m up to.
         <br />
         <Button
           variant="link"
