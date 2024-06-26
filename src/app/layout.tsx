@@ -3,7 +3,7 @@ import { Inter as FontSans } from "next/font/google";
 import { cn } from "@/lib/utils";
 import "@/app/globals.css";
 import { SocialIcon } from "react-social-icons";
-import { SiEnvoyproxy } from "react-icons/si";
+import { Analytics } from "@vercel/analytics/react";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -17,7 +17,7 @@ export interface RootLayoutProps {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html className="scroll-smooth" lang="en" suppressHydrationWarning>
-      <head />
+      <Analytics />
       <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased",
