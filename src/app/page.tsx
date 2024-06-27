@@ -296,7 +296,7 @@ export default function Home() {
             <div className="flex flex-col space-y-12">
               <div
                 id="experience-keysight"
-                className="flex flex-col lg:flex-row md:space-x-8 space-y-12"
+                className="flex flex-col lg:flex-row lg:space-x-8 space-y-12 lg:space-y-0"
               >
                 <div className="flex flex-1 flex-col">
                   <div className="flex space-x-4 justify-between items-center">
@@ -336,7 +336,7 @@ export default function Home() {
               </div>
               <div
                 id="experience-keysight"
-                className="flex flex-col lg:flex-row-reverse lg:space-x-reverse md:space-x-8 space-y-12"
+                className="flex flex-col lg:flex-row-reverse lg:space-x-reverse lg:space-x-8 space-y-12 lg:space-y-0"
               >
                 <div className="flex flex-1 flex-col">
                   <div className="flex space-x-4 justify-between items-center">
