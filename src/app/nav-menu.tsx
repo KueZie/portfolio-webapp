@@ -31,12 +31,12 @@ const projects: { title: string; href: string; description: string }[] = [
     title: "Gecko Jump",
     href: "#geckojump",
     description:
-      "Technology consulting website and customer relationship manager (CRM) for a startup agency. Written in React and Python, persisted by MongoDB."
+      "Technology consulting website and customer relationship manager (CRM) for a startup agency. Written in React and Python, persisted by MongoDB.",
   },
   {
     title: "Github",
     href: "#github",
-    description: "Check out my Github for more projects."
+    description: "Check out my Github for more projects.",
   },
 ];
 
@@ -64,11 +64,14 @@ export function Navbar() {
                   </a>
                 </NavigationMenuLink>
               </li>
-              <ListItem href="/docs" title="Keysight Technologies">
+              <ListItem
+                href="#experience-keysight"
+                title="Keysight Technologies"
+              >
                 Built high-performance email analytics and delivery tools.
               </ListItem>
               <ListItem
-                href="/docs/installation"
+                href="#experience-raymondjames"
                 title="Raymond James Financial"
               >
                 Developed test automation tooling for an internal portfolio

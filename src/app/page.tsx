@@ -14,7 +14,13 @@ import { StickyScroll } from "@/components/ui/sticky-scroll-reveal";
 import EnvoyPreview from "@/app/envoy-preview.png";
 import EstorePreview from "@/app/estore-preview.png";
 import GithubPreview from "@/app/github-preview.png";
+
+import KeysightPic from "@/app/keysight-pic.webp";
+import RaymondJamesPic from "@/app/raymondjames-pic.jpg";
 import Link from "next/link";
+import { Badge } from "@/components/ui/badge";
+import { ExternalLink, Link2Icon } from "lucide-react";
+import { Footer } from "./footer";
 
 const content = [
   {
@@ -159,7 +165,7 @@ export default function Home() {
       <nav
         className={cn(
           !userScrollTrigger && "bg-white",
-          "fixed top-0 left-0 w-full z-50 text-white transition-all p-4 animate-fade-down animate-delay-[2000ms] animate-duration-1000 animate-once"
+          "fixed top-0 left-0 w-full z-[999] text-white transition-all p-4 animate-fade-down animate-delay-[2000ms] animate-duration-1000 animate-once"
         )}
       >
         <div className="container w-full flex items-center justify-center">
@@ -169,9 +175,9 @@ export default function Home() {
       <section className="relative w-full h-screen grid md:grid-cols-2 overflow-hidden">
         <div className="absolute inset-0 w-full h-full bg-slate-200 z-20 [mask-image:radial-gradient(transparent,white)] pointer-events-none" />
         <Boxes />
-        <div className="container p-0 tracking-tight flex w-full md:max-w-xl items-center justify-center">
-          <div className="flex flex-col justify-center z-30">
-            <h1 className="text-6xl font-semibold text-primary z-30 animate-fade-up animate-duration-1000 animate-once">
+        <div className="container p-0 tracking-tighter flex w-full md:max-w-xl items-center justify-center">
+          <div className="px-8 flex flex-col justify-center z-30">
+            <h1 className="text-5xl md:text-6xl font-semibold text-primary text-nowrap z-30 animate-fade-up animate-duration-1000 animate-once">
               Hi, I&apos;m{" "}
               <span
                 style={{ "--shimmer-width": "50px" } as CSSProperties}
@@ -227,40 +233,152 @@ export default function Home() {
           <PiArrowDown className="ml-1.5 h-4 w-4 text-inherit animate-bounce" />
         </Button>
       </div>
-      <div className="space-y-12">
-        <section
-          ref={projectsRef}
-          className="container flex flex-col items-center justify-center py-12"
-        >
-          <div className="text-center p-6 space-y-4">
-            <div className="text-primary/20 text-xl font-semibold tracking-widest">
-              ...
-            </div>
-            <h2 className="tracking-tighter text-4xl font-semibold text-primary">
-              <span className="font-bold bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent">
-                Creative Endeavors
-              </span>
-            </h2>
+      <div className="bg-stone-50 shadow-sm pt-12">
+        <div className="md:w-3/4 mx-auto">
+          <div className="space-y-12">
+            <section
+              ref={projectsRef}
+              className="flex flex-col items-center justify-center py-12"
+            >
+              <div className="text-center p-6 space-y-4">
+                <div className="text-primary/20 text-xl font-semibold tracking-widest">
+                  ...
+                </div>
+                <h2 className="tracking-tighter text-4xl font-semibold text-primary">
+                  <span className="font-bold bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent">
+                    Creative Endeavors
+                  </span>
+                </h2>
+              </div>
+              <StickyScroll content={content} />
+            </section>
           </div>
-          <StickyScroll content={content} />
-        </section>
-
-        <section
-          ref={experienceRef}
-          className="container flex flex-col items-center justify-center py-12"
-        >
-          <div className="text-center p-6 space-y-4">
-            <div className="text-primary/20 text-xl font-semibold tracking-widest">
-              ...
-            </div>
-            <h2 className="tracking-tighter text-4xl font-semibold text-primary">
-              <span className="font-bold bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent">
-                Professional Experience
-              </span>
-            </h2>
-          </div>
-        </section>
+        </div>
       </div>
+      <div className="md:w-3/4 mx-auto mt-24">
+        <div className="space-y-12">
+          <blockquote className="pl-6 pb-2 mx-auto w-3/4 border-l-4 border-black/10 my-12 italic text-lg font-serif">
+            Don&apos;t let the noise of others&apos; opinions drown out your own
+            inner voice. And most important, have the courage to follow your
+            heart and intuition. They somehow already know what you truly want
+            to become. Everything else is secondary.
+            <footer className="not-italic text-right text-sm mt-2 text-primary font-normal">
+              —<strong className="ml-1">Steve Jobs</strong>
+              <span className="text-primary">, 2005</span>
+              <br />
+              <span className="text-sm tracking-tight text-primary/60">
+                Commencement Address at Stanford University
+              </span>
+            </footer>
+          </blockquote>
+          <section
+            ref={experienceRef}
+            className="flex flex-col py-12 px-4 sm:px-16 lg:px-0"
+          >
+            <div className="py-6">
+              <h2 className="tracking-tighter text-4xl font-semibold text-primary">
+                <span className="font-bold bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent">
+                  Professional Experience
+                </span>
+              </h2>
+              <div className="flex flex-row flex-wrap text-md tracking-tight text-gray-500">
+                If you&apos;re interested in my professional experience, click
+                <Link
+                  href="https://hunter-goram-resumes.s3.amazonaws.com/Hunter_Goram_resume.pdf"
+                  className="flex text-primary font-semibold mx-1 items-center hover:text-primary/60 transition-colors duration-150"
+                  target="_blank"
+                >
+                  here <ExternalLink className="ml-1 h-4 w-4 inline" />
+                </Link>{" "}
+                for my resume.
+              </div>
+            </div>
+            <div className="flex flex-col space-y-12">
+              <div
+                id="experience-keysight"
+                className="flex flex-col lg:flex-row md:space-x-8 space-y-12"
+              >
+                <div className="flex flex-1 flex-col">
+                  <div className="flex space-x-4 justify-between items-center">
+                    <h1 className="text-2xl font-bold text-primary">
+                      Keysight Technologies
+                    </h1>
+                    <Badge variant="secondary" className="text-nowrap">
+                      Jun. 2022 - Oct. 2023
+                    </Badge>
+                  </div>
+                  <h2 className="text-md tracking-tight text-gray-500">
+                    Software Engineer Intern
+                  </h2>
+                  <p className="text-primary/80 tracking-tight mt-4 leading-7">
+                    Built super fast email analytics and delivery tools for
+                    internal teams. Developed the <strong>crucial</strong>{" "}
+                    ability to function in a corporate environment. Spent the
+                    weekends with my fellow interns hiking and exploring the
+                    mountains of Colorado.
+                  </p>
+                </div>
+                <div className="flex flex-1 justify-center align-middle">
+                  <div className="flex align-middle w-96">
+                    <div className="relative w-full self-start ring-2 ring-accent rounded-lg overflow-hidden">
+                      <Image
+                        src={KeysightPic}
+                        alt="Keysight Technologies"
+                        className="object-cover rounded-lg border border-accent shadow-xl"
+                      />
+                      <div className="absolute inset-0 z-10 bg-black opacity-50 rounded-lg" />
+                      <div className="absolute bottom-0 right-0 text-xs text-gray-300 tracking-tighter p-4 z-20">
+                        Colorado Springs, CO
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                id="experience-keysight"
+                className="flex flex-col lg:flex-row-reverse lg:space-x-reverse md:space-x-8 space-y-12"
+              >
+                <div className="flex flex-1 flex-col">
+                  <div className="flex space-x-4 justify-between items-center">
+                    <h1 className="text-2xl font-bold text-primary">
+                      Keysight Technologies
+                    </h1>
+                    <Badge variant="secondary" className="text-nowrap">
+                      Jun. 2022 - Oct. 2023
+                    </Badge>
+                  </div>
+                  <h2 className="text-md tracking-tight text-gray-500">
+                    Software Engineer Intern
+                  </h2>
+                  <p className="text-primary/80 tracking-tight mt-4 leading-7">
+                    Improved the performance of automated testing tools for an
+                    internal portfolio rebalancing engine. Developed a passion
+                    for understanding the intricacies of software architecture
+                    and distributed systems design.
+                  </p>
+                </div>
+                <div className="flex flex-1 justify-center align-middle">
+                  <div className="flex align-middle w-96">
+                    <div className="relative w-full self-start ring-2 ring-accent rounded-lg overflow-hidden">
+                      <Image
+                        src={RaymondJamesPic}
+                        alt="Raymond James Financial"
+                        className="object-cover rounded-lg border border-accent shadow-xl"
+                      />
+                      <div className="absolute inset-0 z-10 bg-black opacity-50 rounded-lg" />
+                      <div className="absolute bottom-0 right-0 text-xs text-gray-300 tracking-tighter p-4 z-20">
+                        St. Petersburg, FL
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+      <div className="h-20" />
+      <Footer />
     </main>
   );
 }
