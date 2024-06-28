@@ -1,4 +1,5 @@
 import { Inter as FontSans } from "next/font/google";
+import { Metadata } from "next";
 
 import { cn } from "@/lib/utils";
 import "@/app/globals.css";
@@ -9,6 +10,12 @@ const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
 });
+
+export const meta: Metadata = {
+  title: "Hunter Goram",
+  description:
+    "Personal website of Hunter Goram. I'm a software engineer and cloud architect based in Tampa, Florida.",
+};
 
 export interface RootLayoutProps {
   children: React.ReactNode;
