@@ -238,6 +238,7 @@ export default function Home() {
           <div className="space-y-12">
             <section
               ref={projectsRef}
+              id="projects"
               className="flex flex-col items-center justify-center py-12"
             >
               <div className="text-center p-6 space-y-4">
@@ -273,6 +274,7 @@ export default function Home() {
           </blockquote>
           <section
             ref={experienceRef}
+            id="experience"
             className="flex flex-col py-12 px-4 sm:px-16 lg:px-0"
           >
             <div className="py-6">
@@ -293,7 +295,7 @@ export default function Home() {
                 for my resume.
               </div>
             </div>
-            <div className="flex flex-col space-y-12">
+            <div className="flex flex-col space-y-24">
               <div
                 id="experience-keysight"
                 className="flex flex-col lg:flex-row lg:space-x-8 space-y-12 lg:space-y-0"
@@ -320,7 +322,7 @@ export default function Home() {
                 </div>
                 <div className="flex flex-1 justify-center align-middle">
                   <div className="flex align-middle w-96">
-                    <div className="relative w-full self-start ring-2 ring-accent rounded-lg overflow-hidden">
+                    <div className="relative w-full self-start rounded-lg overflow-hidden">
                       <Image
                         src={KeysightPic}
                         alt="Keysight Technologies"
@@ -341,10 +343,10 @@ export default function Home() {
                 <div className="flex flex-1 flex-col">
                   <div className="flex space-x-4 justify-between items-center">
                     <h1 className="text-2xl font-bold text-primary">
-                      Keysight Technologies
+                      Raymond James
                     </h1>
                     <Badge variant="secondary" className="text-nowrap">
-                      Jun. 2022 - Oct. 2023
+                      Jun. 2021 - Aug. 2021
                     </Badge>
                   </div>
                   <h2 className="text-md tracking-tight text-gray-500">
@@ -359,7 +361,7 @@ export default function Home() {
                 </div>
                 <div className="flex flex-1 justify-center align-middle">
                   <div className="flex align-middle w-96">
-                    <div className="relative w-full self-start ring-2 ring-accent rounded-lg overflow-hidden">
+                    <div className="relative w-full self-start rounded-lg overflow-hidden">
                       <Image
                         src={RaymondJamesPic}
                         alt="Raymond James Financial"

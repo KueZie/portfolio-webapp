@@ -6,28 +6,22 @@ export const Footer = () => {
       <div className="flex flex-col px-4 py-24 mx-auto max-w-7xl sm:px-6 lg:px-8 space-y-1.5">
         <div className="flex gap-x-4 text-primary tracking-tighter leading-none">
           <Link
-            href="/about"
+            href="#projects"
             className="hover:text-primary/60 transition-colors duration-300"
           >
-            About
+            Projects
           </Link>
           <Link
-            href="/contact"
+            href="#experience"
+            className="hover:text-primary/60 transition-colors duration-300"
+          >
+            Experience
+          </Link>
+          <Link
+            href="#contact"
             className="hover:text-primary/60 transition-colors duration-300"
           >
             Contact
-          </Link>
-          <Link
-            href="/terms"
-            className="hover:text-primary/60 transition-colors duration-300"
-          >
-            Terms
-          </Link>
-          <Link
-            href="/privacy"
-            className="hover:text-primary/60 transition-colors duration-300"
-          >
-            Privacy
           </Link>
         </div>
         <div className="text-sm text-primary/60 py-4 max-w-screen-md">
@@ -39,7 +33,7 @@ export const Footer = () => {
           </p>
         </div>
         <div className="text-sm text-primary/60">
-          <p>© 2024 Hunter Goram, LLC. All rights reserved.</p>
+          <p>© 2024 Hunter Goram. All rights reserved.</p>
         </div>
       </div>
     </footer>
