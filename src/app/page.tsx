@@ -233,30 +233,31 @@ export default function Home() {
           <PiArrowDown className="ml-1.5 h-4 w-4 text-inherit animate-bounce" />
         </Button>
       </div>
-      <div className="bg-stone-50 shadow-sm pt-12">
+      <div className="bg-stone-50 shadow-sm pt-12 px-8 md:px-0">
         <div className="md:w-3/4 mx-auto">
           <div className="space-y-12">
             <section
               ref={projectsRef}
               id="projects"
-              className="flex flex-col items-center justify-center py-12"
+              className="flex flex-col items-left justify-center py-12"
             >
-              <div className="text-center p-6 space-y-4">
-                <div className="text-primary/20 text-xl font-semibold tracking-widest">
-                  ...
-                </div>
+              <div className="text-left">
                 <h2 className="tracking-tighter text-4xl font-semibold text-primary">
                   <span className="font-bold bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent">
                     Creative Endeavors
                   </span>
                 </h2>
+                <p className="flex flex-row flex-wrap text-md tracking-tight text-gray-500">
+                  I&apos;m passionate about building things. Here are a few of
+                  my recent projects.
+                </p>
               </div>
               <StickyScroll content={content} />
             </section>
           </div>
         </div>
       </div>
-      <div className="md:w-3/4 mx-auto mt-24">
+      <div className="md:w-3/4 mx-auto mt-24 px-8 md:px-0">
         <div className="space-y-12">
           <blockquote className="pl-6 pb-2 mx-auto w-3/4 border-l-4 border-black/10 my-12 italic text-lg font-serif">
             Don&apos;t let the noise of others&apos; opinions drown out your own
@@ -275,7 +276,7 @@ export default function Home() {
           <section
             ref={experienceRef}
             id="experience"
-            className="flex flex-col py-12 px-4 sm:px-16 lg:px-0"
+            className="flex flex-col py-12"
           >
             <div className="py-6">
               <h2 className="tracking-tighter text-4xl font-semibold text-primary">
@@ -314,10 +315,11 @@ export default function Home() {
                   </h2>
                   <p className="text-primary/80 tracking-tight mt-4 leading-7">
                     Built super fast email analytics and delivery tools for
-                    internal teams. Developed the <strong className="italic">crucial</strong>{" "}
-                    ability to function in a corporate environment. Spent the
-                    weekends with my fellow interns hiking and exploring the
-                    mountains of Colorado.
+                    internal teams. Developed the{" "}
+                    <strong className="italic">crucial</strong> ability to
+                    function in a corporate environment. Spent the weekends with
+                    my fellow interns hiking and exploring the mountains of
+                    Colorado.
                   </p>
                 </div>
                 <div className="flex flex-1 justify-center align-middle">

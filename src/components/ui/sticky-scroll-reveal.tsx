@@ -50,7 +50,7 @@ const ContentItem = ({
           opacity: isInView ? 1 : 0.3,
           translateY: isInView ? 0 : 5,
         }}
-        className="text-lg text-primary/80 max-w-md mt-2"
+        className="text-lg text-primary/80 max-w-md mt-2 text-balance" 
       >
         {description}
       </motion.div>
@@ -73,8 +73,8 @@ export const StickyScroll = ({
   const [activeCardIdx, setActiveCardIdx] = React.useState(0);
 
   return (
-    <motion.div className="flex justify-between relative space-x-24 rounded-md md:p-10">
-      <div className="relative flex flex-col items-start px-2 md:px-4">
+    <motion.div className="flex justify-between relative space-x-24 rounded-md">
+      <div className="relative flex flex-col items-start">
         {content.map((item, idx) => (
           <div key={`${item.title}-${idx}-desktop-content`} className="md:block">
             <ContentItem
