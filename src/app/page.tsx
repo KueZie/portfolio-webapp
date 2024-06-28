@@ -314,7 +314,7 @@ export default function Home() {
                   </h2>
                   <p className="text-primary/80 tracking-tight mt-4 leading-7">
                     Built super fast email analytics and delivery tools for
-                    internal teams. Developed the <strong>crucial</strong>{" "}
+                    internal teams. Developed the <strong className="italic">crucial</strong>{" "}
                     ability to function in a corporate environment. Spent the
                     weekends with my fellow interns hiking and exploring the
                     mountains of Colorado.
