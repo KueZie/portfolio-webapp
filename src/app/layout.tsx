@@ -11,7 +11,7 @@ const fontSans = FontSans({
   variable: "--font-sans",
 });
 
-export const meta: Metadata = {
+export const metadata: Metadata = {
   title: "Hunter Goram",
   description:
     "Personal website of Hunter Goram. I'm a software engineer and cloud architect based in Tampa, Florida.",
