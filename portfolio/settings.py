@@ -16,9 +16,9 @@ SECRET_KEY = os.getenv('SECRET_KEY', NON_PRODUCTION_KEY)
 DEBUG = os.environ.get('DEBUG', True)
 
 if DEBUG:
-  ALLOWED_HOSTS = ['hunter-portfolio-webapp.herokuapp.com', 'www.huntergoram.com', 'localhost', '127.0.0.1']
+  ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 else:
-  ALLOWED_HOSTS = ['hunter-portfolio-webapp.herokuapp.com', 'www.huntergoram.com']
+  ALLOWED_HOSTS = ['hunter-portfolio-webapp.herokuapp.com', 'www.huntergoram.com', 'huntergoram.com']
 
 GRAPHQL_SEARCH_DIRECTORIES = ['graphql_queries']
 GITHUB_API_TOKEN = os.getenv('GITHUB_API_TOKEN', '')
