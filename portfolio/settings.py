@@ -13,7 +13,7 @@ NON_PRODUCTION_KEY = 'django-insecure-la#cqxig8=raajc3wab+d_s=sapi0825=1pk6oo5+=
 SECRET_KEY = os.getenv('SECRET_KEY', NON_PRODUCTION_KEY)
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DEBUG', True)
+DEBUG = os.environ.get('DEBUG', False)
 
 if DEBUG:
   ALLOWED_HOSTS = ['localhost', '127.0.0.1']
